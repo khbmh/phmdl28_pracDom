@@ -11,25 +11,77 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="./js/index.js"></script>
+
+  <style>
+    body {
+      cursor: none;
+      /* Hide the default cursor */
+    }
+
+    #custom-cursor {
+      position: fixed;
+      pointer-events: none;
+      /* Prevent it from interfering with mouse events */
+      transform: translate(-50%, -50%);
+      /* Center the cursor */
+      transition: background-color 0.2s;
+      /* Smooth transition for color change */
+    }
+  </style>
 </head>
 
 <body>
-  <div class="flex items-center justify-center mt-8 gap-6">
-    <input id="task-input" type="text" placeholder="What is your next plan?"
-      class="input input-bordered w-full max-w-xs" />
-    <button id="add-btn" class="btn btn-active btn-primary">Add task!</button>
-  </div>
-  <div id="task-container" class="flex items-center justify-center mt-8 gap-6">
-    <div class="w-full lg:w-1/3">
-      <p class="rounded-md border border-[#5497ef61] px-5 py-2 flex justify-between items-center w-full">
-        <span>I have to study for 1 hour.</span>
-        <i class="ri-delete-bin-2-line text-2xl text-red-400"></i>
+  <main class="px-4 md:px-12 lg:px-0">
+    <div class="flex items-center justify-center mt-8 gap-6">
+      <h1 class="text-3xl font-bold text-[#646EE4]">Simple To do List.</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="flex items-center justify-center mt-8 gap-6">
+      <input id="task-input" type="text" placeholder="What is your next plan?"
+        class="input input-bordered w-full max-w-xs" />
+      <button id="add-btn" class="btn btn-active btn-primary">Add task!</button>
+    </div>
+    <div id="task-container" class="flex flex-col mx-auto mt-8 gap-6 w-full lg:w-1/2 xl:w-1/3">
+
+    </div>
+    <div class="flex items-center justify-center mt-8 gap-6">
+      <button id="remove-all" class="btn btn-error btn-primary">remove all tasks!</button>
+    </div>
+
+
+    <div class="my-16">
+      <p class="px-3 lg:w-1/2 text-justify mx-auto">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ipsum corrupti at modi, dignissimos officiis
+        alias eum in consequatur aliquid nihil repellendus necessitatibus nam dolores, officia, aut facilis quisquam
+        qui.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, sint quas, eos architecto at quia quibusdam
+        excepturi, quae dolorem ex aliquam explicabo! Illo, exercitationem ad temporibus, blanditiis velit deserunt
+        minus reprehenderit ex quos laborum laudantium cum! Similique, laudantium doloremque. Voluptas in, amet
+        voluptates illo sint nemo commodi placeat tempore officia, dolorum, saepe omnis ab fugit eveniet quo provident
+        sit possimus debitis perspiciatis? Quo numquam eveniet consequatur eaque beatae culpa consequuntur et at esse.
+        Sed error similique voluptas unde libero, voluptates corrupti aperiam necessitatibus? Delectus dolor sunt ipsa
+        nobis ut minima beatae rem, quisquam vel voluptates nemo corrupti ducimus ullam ipsum laborum deleniti
+        voluptatum numquam ex, praesentium maxime autem! Magni perferendis soluta repellat veniam ex consequuntur neque
+        debitis autem alias, necessitatibus provident voluptates tempore similique, ullam molestiae nisi ipsam adipisci.
+        Dolor nemo delectus dignissimos eligendi, provident voluptatum nihil et possimus numquam repudiandae officia ab,
+        porro, modi molestiae iusto. Minima, qui eum veniam nesciunt iure voluptates fuga modi veritatis voluptatum hic,
+        rem, commodi quibusdam voluptatem inventore voluptatibus enim ipsa nam? Doloribus quos ipsum est voluptates
+        perferendis nam tempore natus iste tempora dolorem debitis voluptatibus neque maxime maiores quo sit similique
+        doloremque molestias cum, voluptate nemo? Voluptatem laudantium odio fuga in! Nemo quam laborum quaerat officia
+        quo quae laudantium aut ipsa possimus eius explicabo, nobis tempora atque iste ipsum sequi reprehenderit eveniet
+        perferendis est impedit, libero labore. Amet eaque qui incidunt maiores eius impedit recusandae unde non, vel
+        optio sequi repellat minima fugiat eligendi a in vero aliquid omnis eum commodi id? Quaerat praesentium ipsa
+        itaque expedita. In numquam corporis corrupti alias ipsum cum dolores deleniti. Aliquam eius, porro nisi
+        expedita repellendus, sequi impedit excepturi rem aperiam labore asperiores delectus inventore facilis maiores
+        consequuntur voluptates obcaecati. Nemo amet reprehenderit mollitia expedita quas praesentium rem dolorem iusto
+        quis sequi. Ea maxime laboriosam nisi fuga aliquid ut explicabo architecto assumenda rerum maiores deserunt
+        harum minima quia accusantium natus, voluptates nemo totam numquam hic recusandae. Nisi, consequatur iure!
+        Blanditiis dolores voluptatibus tempore? Voluptatum deleniti dolore unde natus quidem cum debitis, sunt, quo
+        placeat corrupti, minus eaque corporis numquam enim expedita?
       </p>
     </div>
-  </div>
-  <div class="flex items-center justify-center mt-8 gap-6">
-    <button id="remove-all" class="btn btn-error btn-primary">remove all tasks!</button>
-  </div>
+  </main>
+  <div id="custom-cursor" class="w-5 h-5 bg-red-200 rounded-full"></div>
 </body>
 
 </html>
